@@ -1,0 +1,61 @@
+***************HTML***************
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSX</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="../src/index.js" type="text/javascript"></script>
+  </body>
+</html>
+
+************************************
+import React from "react";
+import ReactDOM from "react-dom";
+
+const YOURNAME = "Apex Predator";
+//const CURRENTYEAR = "2023";
+const CURRENTDATE = new Date();
+const YEAR = CURRENTDATE.getFullYear();
+console.log(CURRENTDATE);
+console.log(YEAR);
+
+ReactDOM.render(
+  <div>
+    <h1>Fullstack Web Developer</h1>
+    <h2>React project 1.0</h2>
+    <p>Requirment:</p>
+    <ul>
+      <li>React.Js(framework)</li>
+      <li>Node.JS,with Express.js framework</li>
+      <li>REST api,Database(MongoDB,Mongoose)</li>
+      <li>Projects</li>
+    </ul>
+    <div>
+      <p>Created by :{YOURNAME}</p>
+      <p>Copyright@ {YEAR}</p>
+    </div>
+  </div>,
+  document.getElementById("root")
+);
+*****************************************************
+          *******INLINE STYLING*******
+import React from "react";
+import ReactDOM from "react-dom";
+
+const customStyle = {
+  color: "red",
+  fontSize: "20px",
+  border: "1px solid black"
+};
+
+customStyle.color = "blue";
+
+ReactDOM.render(
+  <h1 style={customStyle}>Hello World!</h1>,
+  document.getElementById("root")
+);
+******************************************************
